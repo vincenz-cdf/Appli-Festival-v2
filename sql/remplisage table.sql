@@ -1,0 +1,66 @@
+DELETE FROM Etablissement;
+insert into Etablissement values ('0350785N', 'Collège de Moka', '2 avenue Aristide Briand BP 6', '35401', 'Saint-Malo', '0299206990', null,1,'M.','Dupont','Alain',20);
+insert into Etablissement values ('0350123A', 'Collège Lamartine', '3, avenue des corsaires', '35404', 'Paramé', '0299561459', null, 1,'Mme','Lefort','Anne',58);  
+insert into Etablissement values ('0351234W', 'Collège Léonard de Vinci', '2 rue Rabelais', '35418', 'Saint-Malo', '0299117474', null, 1,'M.','Durand','Pierre',60);   
+insert into Etablissement values ('11111111', 'Centre de rencontres internationales', '37 avenue du R.P. Umbricht BP 108', '35407', 'Saint-Malo', '0299000000', null, 0, 'M.','Guenroc','Guy',200);
+SELECT * from Etablissement;
+
+DELETE FROM Groupe;
+insert into Groupe values ('g001','Equipe sportive du Bachkortostan','ligue Bachkortostan','453850 ',40,'Bachkirie','O',1);
+insert into Groupe values ('g002','Marina Prudencio Chavez','ligue Chavez','75600',25,'Bolivie','O',0);
+insert into Groupe values ('g003','Nangola Bahia de Salvador','ligue Salvador','28009',34,'Brésil','O',1);
+insert into Groupe values ('g004','Bizone de Kawarma','ligue Kawarma','28009',38,'Bulgarie','O',0);
+insert into Groupe values ('g005','Equipe sportive camerounais','ligue camerounais','28009',22,'Cameroun','O',1);
+insert into Groupe values ('g006','Syoung Yaru Mask Dance Group','ligue Dance','28009',29,'Corée du Sud','O',0);
+insert into Groupe values ('g007','Pipe Band','ligue Band','28009',19,'Ecosse','O',1);
+insert into Groupe values ('g008','Aira da Pedra','ligue Pedra','28009',5,'Espagne','O',0);
+insert into Groupe values ('g009','The Jersey Caledonian Pipe Band','ligue Band','101000',21,'Jersey','O',1);
+insert into Groupe values ('g010','Equipe sportive des Émirats','ligue Émirats','101000',30,'Emirats arabes unis','O',1);
+insert into Groupe values ('g011','Equipe sportive mexicain','ligue mexicain','101000',38,'Mexique','O',0);
+insert into Groupe values ('g012','Equipe sportive de Panama','ligue Panama','101000',22,'Panama','O',1);
+insert into Groupe values ('g013','Equipe sportive papou','ligue papou','101000',13,'Papouasie','O',0);
+insert into Groupe values ('g014','Paraguay Ete','ligue Ete','101000',26,'Paraguay','O',1);
+insert into Groupe values ('g015','La Tuque Bleue','ligue Bleue','101000',8,'Québec','O',0);
+insert into Groupe values ('g016','Ensemble Leissen de Oufa','ligue Oufa','101000 ',40,'République de Bachkirie','O',0);
+insert into Groupe values ('g017','Equipe sportive turc','ligue turc','101000',40,'Turquie','O',1);
+insert into Groupe values ('g018','Equipe sportive russe','ligue russe','101000',43,'Russie','O',0);
+insert into Groupe values ('g019','Ruhunu Ballet du village de Kosgoda','ligue Kosgoda','101000',27,'Sri Lanka','O',0);
+insert into Groupe values ('g020','L''Alen','ligue Alen','93400',34,'France - Provence','O',1);
+insert into Groupe values ('g021','L''escolo Di Tourre','ligue Tourre','93400',40,'France - Provence','O',0);
+insert into Groupe values ('g022','Deloubes Kévin','ligue Kévin','93400',1,'France - Bretagne','O',1);
+insert into Groupe values ('g023','Daonie See','ligue See','93400',5,'France - Bretagne','O',0);
+insert into Groupe values ('g024','Boxty','ligue Boxty','93400',5,'France - Bretagne','O',1);
+insert into Groupe values ('g025','Soeurs Chauvel','ligue Chauvel','93400',2,'France - Bretagne','O',0);
+insert into Groupe values ('g026','Cercle Gwik Alet','ligue Alet','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g027','Bagad Quic En Groigne','ligue Groigne','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g028','Penn Treuz','ligue Treuz','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g029','Savidan Launay','ligue Launay','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g030','Cercle Boked Er Lann','ligue Lann','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g031','Bagad Montfortais','ligue Montfortais','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g032','Vent de Noroise','ligue Noroise','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g033','Cercle Strollad','ligue Strollad','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g034','Bagad An Hanternoz','ligue Hanternoz','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g035','Cercle Ar Vro Melenig','ligue Melenig','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g036','Cercle An Abadenn Nevez','ligue Abadenn','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g037','Kerc''h Keltiek Roazhon','ligue Roazhon','93400',0,'France - Bretagne','N',0);
+insert into Groupe  values ('g038','Bagad Plougastel','ligue Plougastel','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g039','Bagad Nozeganed Bro Porh-Loeiz','ligue Porh','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g040','Bagad Nozeganed Bro Porh-Loeiz','ligue Loeiz','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g041','Jackie Molard Quartet','ligue Quartet','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g042','Deomp','ligue Deomp','93400',0,'France - Bretagne','N',0);
+insert into Groupe values ('g043','Cercle Olivier de Clisson','ligue Cercle','93400',0,'France - Bretagne','N',1);
+insert into Groupe values ('g044','Kan Tri','ligue Tri','93400',0,'France - Bretagne','N',1);
+SELECT * from Groupe;
+
+DELETE FROM Attribution;
+insert into Attribution values ('0350785N', 'g001', 11);
+insert into Attribution values ('0350785N', 'g002', 9);
+insert into Attribution values ('0350123A', 'g004', 13);
+insert into Attribution values ('0350123A', 'g005', 8);
+insert into Attribution values ('0351234W', 'g001', 3);
+insert into Attribution values ('0351234W', 'g006', 10);
+insert into Attribution values ('0351234W', 'g007', 7);
+SELECT * from Attribution;
+
+ 
+
