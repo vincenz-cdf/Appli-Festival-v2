@@ -308,5 +308,12 @@ function nbchlouer($connexion, $idGroupe){
    $sth = $obtenirCompte->fetch();
    return $sth;
 }
+function optionModifAttrib($i,$nbOccupGroupe){
+   if($i == $nbOccupGroupe){
+      echo "<option selected>$i</option>";
+   }else{
+      echo "<option>$i</option>";
+   }
+}
 ?>
 

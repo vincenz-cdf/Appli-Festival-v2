@@ -140,40 +140,17 @@ class='tabQuadrille'>";
                echo "&nbsp;<select name='nbChambres'>";
                if($nbChLib>=($chambre-$chambretotal[0])){
                for ($i=0; $i<=(($chambre-$chambretotal[0])+$nbOccupGroupe); $i++)
-               {
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }
+                  optionModifAttrib($i,$nbOccupGroupe);
             }else if($nbChLib == 0){
-               for($i=0;$i<=$nbOccupGroupe;$i++){
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }   
+               for($i=0;$i<=$nbOccupGroupe;$i++)
+                  optionModifAttrib($i,$nbOccupGroupe); 
             }else{
                if($nbChLib<$nbOccupGroupe){
                   for ($i=0; $i<=$nbOccupGroupe; $i++)
-                  {
-                     if($i == $nbOccupGroupe){
-                        echo "<option selected>$nbOccupGroupe</option>";    
-                     }else{
-                        echo "<option>$i</option>";
-                     }
-                  }
+                     optionModifAttrib($i,$nbOccupGroupe);
                }else{
                for ($i=0; $i<=$nbChLib; $i++)
-               {
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }
+                  optionModifAttrib($i,$nbOccupGroupe);
             }
             }
             echo "
@@ -198,14 +175,10 @@ class='tabQuadrille'>";
                      echo "&nbsp;<select name='nbChambres'>";
                      if($nbChLib>=($chambre-$chambretotal[0])){ 
                      for ($i=0; $i<=$chambre-$chambretotal[0]; $i++)
-                     {
                         echo "<option>$i</option>";
-                     }
                   }else{
                      for ($i=0; $i<$nbChLib+1; $i++)
-                     {
                         echo "<option>$i</option>";
-                     }
                   }
                      echo "
                      </select></h5>
@@ -215,9 +188,7 @@ class='tabQuadrille'>";
                   ";
             }
             else
-            {
                echo "<td class='reserveSiLien'>complet</td>";
-            }
          }
          
          $lgEtab=$rsEtab->fetch();
