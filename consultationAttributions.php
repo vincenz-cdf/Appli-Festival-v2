@@ -15,7 +15,7 @@ if ($nbEtab!=0)
    echo "
    <table width='75%' cellspacing='0' cellpadding='0' align='center'
    <tr><td>
-   <p align='center'><a href='modificationAttributions.php?action=demanderModifAttrib'>
+   <p align='center'><a class='buttonCréa' href='modificationAttributions.php?action=demanderModifAttrib'>
    Effectuer ou modifier les attributions</a></p></td></tr></table><br><br>";
    
    // POUR CHAQUE ÉTABLISSEMENT : AFFICHAGE D'UN TABLEAU COMPORTANT 2 LIGNES 
@@ -31,7 +31,7 @@ if ($nbEtab!=0)
    
       echo "
       <table width='75%' cellspacing='0' cellpadding='0' align='center' 
-      class='tabQuadrille'>";
+      class='content-table'>";
       
       $nbOffre=$lgEtab["nombreChambresOffertes"];
       $nbOccup=obtenirNbOccup($connexion, $idEtab);
@@ -40,15 +40,18 @@ if ($nbEtab!=0)
       
       // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE 
       echo "
-      <tr class='enTeteTabQuad'>
-         <td colspan='3' align='left'><strong>$nomEtab</strong>&nbsp;
+      <thead>
+      <tr>
+         <th colspan='3' align='left'><strong>$nomEtab</strong>&nbsp;
          (Offre : $nbOffre&nbsp;&nbsp;Disponibilités : $nbChLib)
-         </td>
-      </tr>";
+         </th>
+      </tr>
+      </thead>
+      ";
           
       // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE 
       echo "
-      <tr class='ligneTabQuad'>
+      <tr>
          <td width='35%' align='left'><i><strong>Nom groupe</strong></i></td>
          <td width='30%' align='left'><i><strong>Pays</strong></i></td>
          <td width='35%' align='left'><i><strong>Chambres attribuées</strong></i>
@@ -68,7 +71,7 @@ if ($nbEtab!=0)
          $nomGroupe=$lgGroupe['nom'];
          $paysGroupe=$lgGroupe['nompays'];
          echo "
-         <tr class='ligneTabQuad'>
+         <tr>
             <td width='35%' align='left'>$nomGroupe</td>
             <td width='30%' align='left'>$paysGroupe</td>";
          // On recherche si des chambres ont déjà été attribuées à ce groupe

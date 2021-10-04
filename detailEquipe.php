@@ -24,7 +24,7 @@ foreach ($lgEtab as $row) {
       $stand=$row['stand'];
 
    echo "
-   <table width='60%' cellspacing='0' cellpadding='0' align='center' class='content-equipe'>
+   <table width='60%' cellspacing='0' cellpadding='0' align='center' class='content-table'>
       
       <thead>
       <tr>

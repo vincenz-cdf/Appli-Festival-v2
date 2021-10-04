@@ -5,8 +5,8 @@ include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");
 
-echo "<p align='center'><font size='3'> <a  href = 'index.php'> Accueil </a> -> <a href = 'consultationAttributions.php'>
-Attribution chambres </a> -> Effectuer ou modifier les attributions</p> ";
+echo "<br><p class='textArianne' align='center'><font size='3'> <a  href = 'index.php'> Accueil </a> -> <a href = 'consultationAttributions.php'>
+Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br> ";
 // EFFECTUER OU MODIFIER LES ATTRIBUTIONS POUR L'ENSEMBLE DES ÉTABLISSEMENTS
 
 // CETTE PAGE CONTIENT UN TABLEAU CONSTITUÉ DE 2 LIGNES D'EN-TÊTE (LIGNE TITRE ET 
@@ -35,21 +35,24 @@ if ($action=='validerModifAttrib')
 
 echo "
 <table width='80%' cellspacing='0' cellpadding='0' align='center' 
-class='tabQuadrille'>";
+class='content-equipe'>";
 
    // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE
    echo "
-   <tr class='enTeteTabQuad'>
-      <td><strong>Equipes</strong></td>
-      <td width='10%'><strong>nombre chambre réservées</strong></td>
-      <td width='10%'><strong>Pays d'origine</strong></td>
-      <td colspan=$nb><strong>Attributions</strong></td>
-   </tr>";
+   <thead>
+   <tr>
+      <th><strong>Equipes</strong></th>
+      <th width='10%'><strong>nombre chambre réservées</strong></th>
+      <th width='10%'><strong>Pays d'origine</strong></th>
+      <th colspan=$nb><strong>Attributions</strong></th>
+   </tr>
+   </thead>
+   ";
       
 
    // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE (ÉTABLISSEMENTS)
    echo "
-   <tr class='ligneTabQuad'>
+   <tr>
       <td>▼</td>
       <td>▼</td>
       <td>▼</td>";
@@ -93,7 +96,7 @@ class='tabQuadrille'>";
       $chambre=retourneNbchambre($lgGroupe['nombrePersonnes']);
       $chambretotal=nbchlouer($connexion,$idGroupe);
       echo "
-      <tr class='ligneTabQuad'>
+      <tr>
          <td width='15%' > <font size='2'> $nom <p><Strong>(Ch à louer : $chambre)<p></strong></td>\n";
          if($chambretotal[0]>0){
             echo" 
@@ -140,17 +143,40 @@ class='tabQuadrille'>";
                echo "&nbsp;<select name='nbChambres'>";
                if($nbChLib>=($chambre-$chambretotal[0])){
                for ($i=0; $i<=(($chambre-$chambretotal[0])+$nbOccupGroupe); $i++)
-                  optionModifAttrib($i,$nbOccupGroupe);
+               {
+                  if($i == $nbOccupGroupe){
+                     echo "<option selected>$nbOccupGroupe</option>";    
+                  }else{
+                     echo "<option>$i</option>";
+                  }
+               }
             }else if($nbChLib == 0){
-               for($i=0;$i<=$nbOccupGroupe;$i++)
-                  optionModifAttrib($i,$nbOccupGroupe); 
+               for($i=0;$i<=$nbOccupGroupe;$i++){
+                  if($i == $nbOccupGroupe){
+                     echo "<option selected>$nbOccupGroupe</option>";    
+                  }else{
+                     echo "<option>$i</option>";
+                  }
+               }   
             }else{
                if($nbChLib<$nbOccupGroupe){
                   for ($i=0; $i<=$nbOccupGroupe; $i++)
-                     optionModifAttrib($i,$nbOccupGroupe);
+                  {
+                     if($i == $nbOccupGroupe){
+                        echo "<option selected>$nbOccupGroupe</option>";    
+                     }else{
+                        echo "<option>$i</option>";
+                     }
+                  }
                }else{
                for ($i=0; $i<=$nbChLib; $i++)
-                  optionModifAttrib($i,$nbOccupGroupe);
+               {
+                  if($i == $nbOccupGroupe){
+                     echo "<option selected>$nbOccupGroupe</option>";    
+                  }else{
+                     echo "<option>$i</option>";
+                  }
+               }
             }
             }
             echo "
@@ -175,10 +201,14 @@ class='tabQuadrille'>";
                      echo "&nbsp;<select name='nbChambres'>";
                      if($nbChLib>=($chambre-$chambretotal[0])){ 
                      for ($i=0; $i<=$chambre-$chambretotal[0]; $i++)
+                     {
                         echo "<option>$i</option>";
+                     }
                   }else{
                      for ($i=0; $i<$nbChLib+1; $i++)
+                     {
                         echo "<option>$i</option>";
+                     }
                   }
                      echo "
                      </select></h5>
@@ -188,7 +218,9 @@ class='tabQuadrille'>";
                   ";
             }
             else
+            {
                echo "<td class='reserveSiLien'>complet</td>";
+            }
          }
          
          $lgEtab=$rsEtab->fetch();

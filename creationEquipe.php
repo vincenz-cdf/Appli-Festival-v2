@@ -41,7 +41,7 @@ echo "
 <form method='POST' action='creationEquipe.php?'>
    <input type='hidden' value='validerCreEqu' name='action'>
    <table width='85%' align='center' cellspacing='0' cellpadding='0' 
-   class='content-equipe'>
+   class='content-table'>
       <thead>
          <tr>
          <th colspan='3'>Nouvelle Equipe</th>

@@ -9,14 +9,18 @@ echo "
 <br>
 
 <p align='center' class='textArianne'><a  href = 'index.php'> Accueil </a> -> Liste des Etablissements</p>
-<br> ";
+<br> 
+";
 // AFFICHER L'ENSEMBLE DES ÉTABLISSEMENTS
 // CETTE PAGE CONTIENT UN TABLEAU CONSTITUÉ D'1 LIGNE D'EN-TÊTE ET D'1 LIGNE PAR
 // ÉTABLISSEMENT
 
 echo "
+
+   <p align='center'><a class='buttonCréa' href='creationEtablissement.php?action=demanderCreEtab'>
+   Créer un etablissement</a></p>
 <table width='70%' cellspacing='0' cellpadding='0' align='center' 
-class='content-equipe'>
+class='content-table'>
    <thead>
    <tr>
       <th colspan='4'>Etablissements</th>
@@ -39,11 +43,11 @@ class='content-equipe'>
          <td width='52%'>$nom</td>
          
          <td width='16%' align='center'> 
-         <a href='detailEtablissement.php?id=$id'>
+         <a class='buttonTab' href='detailEtablissement.php?id=$id'>
          Voir détail</a></td>
          
          <td width='16%' align='center'> 
-         <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$id'>
+         <a class='buttonTab' href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$id'>
          Modifier</a></td>";
       	
          // S'il existe déjà des attributions pour l'établissement, il faudra
@@ -52,7 +56,7 @@ class='content-equipe'>
 			{
             echo "
             <td width='16%' align='center'> 
-            <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$id'>
+            <a class='buttonTab' href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$id'>
             Supprimer</a></td>";
          }
          else
@@ -67,10 +71,6 @@ class='content-equipe'>
       }
    }   
    echo "
-   <tr class='content-equipe'>
-      <td colspan='4'><a href='creationEtablissement.php?action=demanderCreEtab'>
-      Création d'un établissement</a ></td>
-  </tr>
   </tbody>
 </table>";
 

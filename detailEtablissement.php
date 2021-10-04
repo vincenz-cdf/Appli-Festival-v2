@@ -5,8 +5,8 @@ include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");
 
-echo "<p align='center'><a  href = 'index.php'> Accueil </a> -> <a href = 'listeEtablissements.php'>
-Liste des établissements </a> -> Détail des établissements</p> ";
+echo "<br><p class='textArianne' align='center'><a href = 'index.php'> Accueil </a> -> <a href = 'listeEtablissements.php'>
+Liste des établissements </a> -> Détail des établissements</p><br>";
 
 $id=$_REQUEST['id'];  
 
@@ -29,36 +29,39 @@ foreach ($lgEtab as $row) {
 
    echo "
    <table width='60%' cellspacing='0' cellpadding='0' align='center' 
-   class='tabNonQuadrille'>
+   class='content-table'>
       
-      <tr class='enTeteTabNonQuad'>
-         <td colspan='3'>$nom</td>
+      <thead>
+      <tr>
+         <th colspan='3'>$nom</th>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      </thead>
+
+      <tr>
          <td  width='20%'> Id: </td>
          <td>$id</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Adresse: </td>
          <td>$adresseRue</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Code postal: </td>
          <td>$codePostal</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Ville: </td>
          <td>$ville</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Téléphone: </td>
          <td>$tel</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> E-mail: </td>
          <td>$adresseElectronique</td>
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Type: </td>";
          if ($type==1)
          {
@@ -70,12 +73,12 @@ foreach ($lgEtab as $row) {
          }
       echo "
       </tr>
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Responsable: </td>
          <td>$civiliteResponsable&nbsp; $nomResponsable&nbsp; $prenomResponsable
          </td>
       </tr> 
-      <tr class='ligneTabNonQuad'>
+      <tr>
          <td> Offre: </td>
          <td>$nombreChambresOffertes&nbsp;chambre(s)</td>
       </tr>
