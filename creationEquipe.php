@@ -96,10 +96,10 @@ echo "
          </tr>
                <tr>
          <td align="right"></td>
-         <td><input type="submit" value="Valider" name="valider"><input type="reset" value="Annuler" name="annuler"></td>
+         <td><input class="buttonTab" type="submit" value="Valider" name="valider"><input type="reset" class="buttonCréa" value="Annuler" name="annuler"></td>
       </tr>
       <tr>
-         <td colspan="2" align="center"><a href="gestionequipe.php">Retour</a>
+         <td colspan="2" align="center"><a class="buttonRetour" href="gestionequipe.php">Retour</a>
          </td>
       </tr>
    </table>';

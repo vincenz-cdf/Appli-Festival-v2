@@ -6,7 +6,18 @@ include("_gestionBase.inc.php");
 include("_controlesEtGestionErreurs.inc.php");
 
 echo "<br><p class='textArianne' align='center'><font size='3'> <a  href = 'index.php'> Accueil </a> -> <a href = 'consultationAttributions.php'>
-Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br> ";
+Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br>
+<table align='center' width='80%'>
+   <tr>
+      <td width='34%' align='left'><font size='3'></a>
+      </td>
+      <td class='reserveSiLien'>&nbsp;</td>
+      <td width='30%' align='left'><font size='3'> Réservation possible si lien</td>
+      <td class='reserve'>&nbsp;</td>
+      <td width='30%' align='left'><font size='3'> Chambres réservées</td>
+   </tr>
+</table>
+ ";
 // EFFECTUER OU MODIFIER LES ATTRIBUTIONS POUR L'ENSEMBLE DES ÉTABLISSEMENTS
 
 // CETTE PAGE CONTIENT UN TABLEAU CONSTITUÉ DE 2 LIGNES D'EN-TÊTE (LIGNE TITRE ET 
@@ -143,40 +154,17 @@ class='content-equipe'>";
                echo "&nbsp;<select name='nbChambres'>";
                if($nbChLib>=($chambre-$chambretotal[0])){
                for ($i=0; $i<=(($chambre-$chambretotal[0])+$nbOccupGroupe); $i++)
-               {
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }
+                  optionModifAttrib($i,$nbOccupGroupe);
             }else if($nbChLib == 0){
-               for($i=0;$i<=$nbOccupGroupe;$i++){
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }   
+               for($i=0;$i<=$nbOccupGroupe;$i++)
+                  optionModifAttrib($i,$nbOccupGroupe); 
             }else{
                if($nbChLib<$nbOccupGroupe){
                   for ($i=0; $i<=$nbOccupGroupe; $i++)
-                  {
-                     if($i == $nbOccupGroupe){
-                        echo "<option selected>$nbOccupGroupe</option>";    
-                     }else{
-                        echo "<option>$i</option>";
-                     }
-                  }
+                     optionModifAttrib($i,$nbOccupGroupe);
                }else{
                for ($i=0; $i<=$nbChLib; $i++)
-               {
-                  if($i == $nbOccupGroupe){
-                     echo "<option selected>$nbOccupGroupe</option>";    
-                  }else{
-                     echo "<option>$i</option>";
-                  }
-               }
+                  optionModifAttrib($i,$nbOccupGroupe);
             }
             }
             echo "
@@ -229,18 +217,5 @@ class='content-equipe'>";
    } // Fin de la boucle sur les groupes à héberger
 echo "
 </table>"; // Fin du tableau principal
-
-// AFFICHAGE DE LA LÉGENDE
-echo "
-<table align='center' width='80%'>
-   <tr>
-      <td width='34%' align='left'><font size='3'> <a href='consultationAttributions.php'>Retour</a>
-      </td>
-      <td class='reserveSiLien'>&nbsp;</td>
-      <td width='30%' align='left'><font size='3'> Réservation possible si lien</td>
-      <td class='reserve'>&nbsp;</td>
-      <td width='30%' align='left'><font size='3'> Chambres réservées</td>
-   </tr>
-</table>";
 
 ?>

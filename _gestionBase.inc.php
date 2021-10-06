@@ -26,7 +26,7 @@ function obtenirReqEtablissements()
 
 function obtenirReqEquipe()
 {
-   $req="SELECT * from Groupe order by id";
+   $req="SELECT * from Groupe order by nom";
    return $req;
 }
 

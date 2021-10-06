@@ -9,7 +9,7 @@ echo "<br><p align='center' class='textArianne'><a  href = 'index.php'> Accueil 
 
 $action=$_REQUEST['action'];
 $id=$_REQUEST['id'];
-
+$chambretotal=nbchlouer($connexion,$id);
 if ($action=='demanderModifEqu')
 {
    $lgEqu=obtenirDetailEquipe($connexion, $id);
@@ -24,14 +24,23 @@ if ($action=='demanderModifEqu')
 }
 else
 {
+   $nombrePersonnes=$_REQUEST['nombrePersonnes'];
+   if(($chambretotal[0]*3)<=$nombrePersonnes){
       $nom=$_REQUEST['nom'];
       $identiteResponsable=$_REQUEST['identiteResponsable'];
       $adressePostale=$_REQUEST['adressePostale'];
-      $nombrePersonnes=$_REQUEST['nombrePersonnes'];
       $nomPays=$_REQUEST['nomPays'];
       $stand=$_REQUEST['stand'];
-
+ 
       modifierEquipe($connexion, $id, $nom,$identiteResponsable,$adressePostale, $nombrePersonnes, $nomPays, $stand);
+   }else{
+      $nom=$_REQUEST['nom'];
+      $identiteResponsable=$_REQUEST['identiteResponsable'];
+      $adressePostale=$_REQUEST['adressePostale'];
+      $nomPays=$_REQUEST['nomPays'];
+      $stand=$_REQUEST['stand'];
+   }
+
 }
 
 echo "
@@ -42,9 +51,14 @@ echo "
    
       <thead>
       <tr>
-         <th colspan='3'>$nom ($id)</th>
+         <th colspan='3'>".$nom." (".$id.")</th>
       </tr>
       </thead>
+      <tr>
+         <th><input type='hidden' value=".$id." name='id'></th>
+      </tr>
+
+
 ";
       
       echo '
@@ -97,11 +111,11 @@ echo "
       <tr>
          <td align="right">
          </td>
-         <td align="left"><input type="submit" value="Valider" name="valider"><input type="reset" value="Annuler" name="annuler">
+         <td align="left"><input class="buttonTab" type="submit" value="Valider" name="valider"><input class="buttonCréa" type="reset" value="Annuler" name="annuler">
          </td>
       </tr>
       <tr>
-         <td colspan="2" align="center"><a href="gestionEquipe.php">Retour</a>
+         <td colspan="2" align="center"><a class="buttonRetour" href="gestionEquipe.php">Retour</a>
          </td>
       </tr>
          
@@ -114,8 +128,15 @@ echo "
 // confirmation
 if ($action=='validerModifEqu')
 {
+   if(($chambretotal[0]*3)<=$nombrePersonnes){
       echo "
-      <h5><center>La modification a été effectuée</center></h5>";
+      <h5><center><strong>La modification a été effectuée</strong></center></h5>";
+   }else{
+      echo "
+      <h5><center><strong>modifications imposible !!!</strong></center></h5>
+      <h5><center><strong> Si vous souétez enlever des personnes, il faut que vous déprogramier des chambre </strong></center></h5>";
+ 
+   }
 }
 
 ?>

@@ -1,3 +1,20 @@
+/*Les boutons */
+
+.buttonRetour{
+background-color: #184cff;
+border: none;
+color: rgb(255, 255, 255);
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+border-radius: 20%;
+}
+.buttonRetour:hover{
+color: #000;
+}
 
 .buttonCréa{
 background-color: #c22222;
@@ -87,20 +104,6 @@ td,tr
 /* Style du tableau contenant les éléments de menu : fond bleu ciel, épaisseur 
 1px, espacement de 3x entre la bordure gauche de chaque cellule et le texte et
 texte centré */
-table.tabMenu td
-{
-   background-color:#DDFDFF;
-   color:black;
-   border-bottom:2px solid #777777;
-   border-right:2px solid #777777;
-   border-left:2px solid #777777;
-   border-top:2px solid #777777;
-   padding-left:3px;
-   padding-right:3px;
-   width:25%;
-   height:18px;
-   text-align:center;
-} 
 
 /* Style pour les éléments du menu (mise en gras et italique) */ 
 .menu
@@ -112,36 +115,6 @@ table.tabMenu td
 }
 
 /* STYLES POUR LES TABLEAUX QUADRILLÉS */
-
-/* Style des tableaux avec quadrillage : épaisseur du quadrillage 1px, 
-espacement de 3x entre la bordure gauche de chaque cellule et le texte */
-table.tabQuadrille td
-{
-   border-bottom:1px solid #777777;
-   border-right:1px solid #777777;
-   border-left:1px solid #777777;
-   border-top:1px #777777;
-   padding-left:3px;
-} 
-
-/* Style pour la 1ère ligne d'en-tête des tableaux quadrillés : fond avec 
-nuances de jaune et texte centré */
-tr.enTeteTabQuad
-{
-   background-image:url('../images/xpBarre.jpg');
-   height:21px;
-   text-align:center;
-} 
-
-/* Style pour les lignes (autres que la 1ère ligne d'en-tête) des tableaux 
-quadrillés : fond écru et texte centré */
-tr.ligneTabQuad 
-{
-   background-color:#FFFFE0;
-   text-align:center;
-   font-size: 62.5%;
-   color:black;
-}
 
 .content-table 
 {
@@ -234,6 +207,9 @@ td.reserveSiLien
 {
    background-color:#FFFFFF;
    color:black;
+   color:#FFFFFF;       
+   font:14px Georgia, "Times New Roman", Times, serif;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /* Fond parme */
@@ -241,6 +217,9 @@ td.reserve
 {
    background-color:#FFBEFF;
    color:black;
+   color:#FFFFFF;       
+   font:14px Georgia, "Times New Roman", Times, serif;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .containing {

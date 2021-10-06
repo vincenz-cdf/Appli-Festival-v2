@@ -68,11 +68,11 @@ echo "
    
       <thead>
       <tr>
-         <th colspan='3'>$nom ($id)</th>
+         <th colspan='3'>".$nom."(".$id.")</th>
       </tr>
       </thead>
       <tr>
-         <th><input type='hidden' value='$id' name='id'></th>
+         <th><input type='hidden' value=".$id." name='id'></th>
       </tr>";
       
       echo '
