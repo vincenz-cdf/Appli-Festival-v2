@@ -12,9 +12,9 @@ Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br>
       <td width='34%' align='left'><font size='3'></a>
       </td>
       <td class='reserveSiLien'>&nbsp;</td>
-      <td width='30%' align='left'><font size='4'> Réservation possible si liste déroulante</td>
+      <td width='30%' align='left'><font size='4' class='textArianne'> Réservation possible si liste déroulante</td>
       <td class='reserve'>&nbsp;</td>
-      <td width='30%' align='left'><font size='4'> Chambres réservées</td>
+      <td width='30%' align='left'><font size='4' class='textArianne'> Chambres réservées</td>
    </tr>
 </table>
  ";
@@ -46,14 +46,14 @@ if ($action=='validerModifAttrib')
 
 echo "
 <table width='80%' cellspacing='0' cellpadding='0' align='center' 
-class='content-equipe'>";
+class='content-attri'>";
 
    // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE
    echo "
    <thead>
    <tr>
       <th><strong>Equipes</strong></th>
-      <th width='10%'><strong>nombre chambre réservées</strong></th>
+      <th width='10%'><strong>Nb chambres réservées</strong></th>
       <th width='10%'><strong>Pays d'origine</strong></th>
       <th colspan=$nb><strong>Attributions</strong></th>
    </tr>
@@ -63,7 +63,7 @@ class='content-equipe'>";
 
    // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE (ÉTABLISSEMENTS)
    echo "
-   <tr>
+   <tr class='content-attri'>
       <td>▼</td>
       <td>▼</td>
       <td>▼</td>";
@@ -107,7 +107,7 @@ class='content-equipe'>";
       $chambre=retourneNbchambre($lgGroupe['nombrePersonnes']);
       $chambretotal=nbchlouer($connexion,$idGroupe);
       echo "
-      <tr>
+      <tr class='content-attri'>
          <td width='15%' > <font size='2'> $nom <p><Strong>(Ch à louer : $chambre)<p></strong></td>\n";
          if($chambretotal[0]>0){
             echo" 

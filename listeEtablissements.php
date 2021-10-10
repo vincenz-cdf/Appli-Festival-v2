@@ -38,8 +38,7 @@ class='content-table'>
       $id=$row['id'];
       $nom=$row['nom'];
       echo "
-      <tbody>
-		<tr>
+		<tr class='content-table'>
          <td width='52%'>$nom</td>
          
          <td width='16%' align='center'> 
@@ -71,7 +70,6 @@ class='content-table'>
       }
    }   
    echo "
-  </tbody>
 </table>";
 
 ?>

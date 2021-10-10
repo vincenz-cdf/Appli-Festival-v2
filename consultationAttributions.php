@@ -44,10 +44,20 @@ if ($nbEtab!=0)
       // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE 
       echo "
       <thead>
-      <tr>
+      <tr>";
+         if($nbChLib != 0){
+         echo"
          <th colspan='3' align='left'><strong>$nomEtab</strong>&nbsp;
          (Offre : $nbOffre&nbsp;&nbsp;Disponibilités : $nbChLib)
-         </th>
+         </th>";
+         }else{
+         echo"
+         <th colspan='3' align='left'><strong>$nomEtab</strong>&nbsp;
+         (Offre : $nbOffre&nbsp;&nbsp;Disponibilités : $nbChLib) (Complet)
+         </th>" ;           
+         }
+
+         echo"
       </tr>
       </thead>
       ";
@@ -74,7 +84,7 @@ if ($nbEtab!=0)
          $nomGroupe=$lgGroupe['nom'];
          $paysGroupe=$lgGroupe['nompays'];
          echo "
-         <tr>
+         <tr class='content-table'>
             <td width='35%' align='left'>$nomGroupe</td>
             <td width='30%' align='left'>$paysGroupe</td>";
          // On recherche si des chambres ont déjà été attribuées à ce groupe

@@ -219,7 +219,39 @@ texte centré */
    background-color: #000;
 } 
 
+.content-attri 
+{
+   border-radius: 5px 5px 0 0;
+   overflow: hidden;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+ 
+.content-attri thead tr
+{
+   height:35px;
+   font:18px Georgia, "Times New Roman", Times, serif;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   text-align:center;
+   background-color: #9F2B00;
+   color: #ffffff;
 
+} 
+
+.content-attri td 
+{
+   background-color:#ffffff;
+   height:30px;
+   text-align:center;
+   color:#000;       
+   font:20px Georgia, "Times New Roman", Times, serif;
+   padding-left:3px;
+  border-right: solid 1px #d6d6d6; 
+  border-left: solid 1px #d6d6d6;
+} 
+
+.content-attri tbody tr{
+   border-bottom: 1px solid #d6d6d6;
+}
 
 /* STYLE POUR LES MESSAGES D'ERREUR AFFICHÉS EN BAS DE PAGE (FOND : OCRE, 
 COULEUR DU TEXTE : ROSE) */
