@@ -158,11 +158,11 @@ echo "
       <tr>
          <td align="right">
          </td>
-         <td align="left"><input type="submit" value="Valider" name="valider"><input type="reset" value="Annuler" name="annuler">
+         <td align="left"><input class="buttonTab" type="submit" value="Valider" name="valider"><input class="buttonCréa" type="reset" value="Annuler" name="annuler">
          </td>
       </tr>
       <tr>
-         <td colspan="2" align="center"><a href="listeEtablissements.php">Retour</a>
+         <td colspan="2" align="center"><a class="buttonRetour" href="listeEtablissements.php">Retour</a>
          </td>
       </tr>
    </table>';

@@ -169,7 +169,7 @@ class='content-equipe'>";
             }
             echo "
             </select></h5>
-            <input type='submit' value='Valider' name='valider'>
+            <input type='submit' class='buttonAttri' value='Valider' name='valider'>
          </form></td>";
          }
          else
@@ -200,7 +200,7 @@ class='content-equipe'>";
                   }
                      echo "
                      </select></h5>
-                     <input type='submit' value='Valider' name='valider'>
+                     <input class='buttonAttri' type='submit' value='Valider' name='valider'>
                   </form>
                </td>
                   ";

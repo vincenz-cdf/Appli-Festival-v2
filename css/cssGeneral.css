@@ -16,6 +16,22 @@ border-radius: 20%;
 color: #000;
 }
 
+.buttonAttri{
+background-color: #184cff;
+border: none;
+color: rgb(255, 255, 255);
+padding: 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+border-radius: 20%;
+}
+.buttonRetour:hover{
+color: #000;
+}
+
 .buttonCréa{
 background-color: #c22222;
 border: none;
@@ -275,7 +291,7 @@ nav a::before{
    content: '';
    display: block;
    height: 5px;
-   background-color: #FF4500;
+   background-color: #444;
    position: absolute;
    top: 0;
    width: 0%;

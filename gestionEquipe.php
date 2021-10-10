@@ -4,7 +4,7 @@ $titre="- Equipes";
 include("_debut.inc.php");
 include("_gestionBase.inc.php"); 
 include("_controlesEtGestionErreurs.inc.php");
-include("_affichage.php");
+
 
 echo "
 <br>
