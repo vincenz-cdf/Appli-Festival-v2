@@ -63,7 +63,7 @@ foreach ($lgEtab as $row) {
    
    <table align='center' cellspacing='15' cellpadding='0'>
       <tr>
-         <td colspan='2' align='center'><a href='gestionEquipe.php'>Retour</a>
+         <td colspan='2' align='center'><a class='buttonRetour' href='gestionEquipe.php'>Retour</a>
          </td>
       </tr>";
 }

@@ -85,7 +85,7 @@ foreach ($lgEtab as $row) {
    </table>
    <table align='center'>
       <tr>
-         <td align='center'><a href='listeEtablissements.php'>Retour</a>
+         <td align='center'><a class='buttonRetour' href='listeEtablissements.php'>Retour</a>
          </td>
       </tr>
    </table>";

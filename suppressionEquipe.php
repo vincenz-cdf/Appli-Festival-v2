@@ -22,9 +22,9 @@ if ($_REQUEST['action']=='demanderSupprEqu')
    echo "
    <br><center><h5 class='texteAccueil'>Souhaitez-vous vraiment supprimer l'équipe ? 
    <br><br>
-   <a href='suppressionEquipe.php?action=validerSupprEqu&amp;id=$id'>
+   <a class='buttonCréa2' href='suppressionEquipe.php?action=validerSupprEqu&amp;id=$id'>
    Oui</a>&nbsp; &nbsp; &nbsp; &nbsp;
-   <a href='gestionEquipe.php?'>Non</a></h5></center>";
+   <a class='buttonCréa' href='gestionEquipe.php?'>Non</a></h5></center>";
 }
 
 // Cas 2ème étape (on vient de suppressionEtablissement.php)
@@ -34,7 +34,7 @@ else
    supprimerEquipe($connexion, $id);
    echo "
    <br><br><center><h5>L'équipe $nom a été supprimé</h5>
-   <a href='gestionEquipe.php?'>Retour</a></center>";
+   <a class='buttonRetour' href='gestionEquipe.php?'>Retour</a></center>";
 }
 
 ?>

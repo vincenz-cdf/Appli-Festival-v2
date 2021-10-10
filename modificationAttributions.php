@@ -12,9 +12,9 @@ Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br>
       <td width='34%' align='left'><font size='3'></a>
       </td>
       <td class='reserveSiLien'>&nbsp;</td>
-      <td width='30%' align='left'><font size='3'> Réservation possible si lien</td>
+      <td width='30%' align='left'><font size='4'> Réservation possible si liste déroulante</td>
       <td class='reserve'>&nbsp;</td>
-      <td width='30%' align='left'><font size='3'> Chambres réservées</td>
+      <td width='30%' align='left'><font size='4'> Chambres réservées</td>
    </tr>
 </table>
  ";

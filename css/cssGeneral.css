@@ -47,6 +47,21 @@ border-radius: 20%;
 .buttonCréa:hover{
 color: #000;
 }
+.buttonCréa2{
+   background-color: #50b422;
+   border: none;
+   color: rgb(255, 255, 255);
+   padding: 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   border-radius: 20%;
+   }
+   .buttonCréa2:hover{
+   color: #000;
+   }
 
 .buttonTab {   /*permet d'avoir le style des bouton */
    background-color: #04AA6D;
