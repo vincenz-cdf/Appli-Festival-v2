@@ -1,8 +1,8 @@
 DELETE FROM Etablissement;
-insert into Etablissement values ('0350785N', 'Collège de Moka', '2 avenue Aristide Briand BP 6', '35401', 'Saint-Malo', '0299206990', null,1,'M.','Dupont','Alain',20);
-insert into Etablissement values ('0350123A', 'Collège Lamartine', '3, avenue des corsaires', '35404', 'Paramé', '0299561459', null, 1,'Mme','Lefort','Anne',58);  
-insert into Etablissement values ('0351234W', 'Collège Léonard de Vinci', '2 rue Rabelais', '35418', 'Saint-Malo', '0299117474', null, 1,'M.','Durand','Pierre',60);   
-insert into Etablissement values ('11111111', 'Centre de rencontres internationales', '37 avenue du R.P. Umbricht BP 108', '35407', 'Saint-Malo', '0299000000', null, 0, 'M.','Guenroc','Guy',200);
+insert into Etablissement values (1, 'Collège de Moka', '2 avenue Aristide Briand BP 6', '35401', 'Saint-Malo', '0299206990', null,1,'M.','Dupont','Alain',20);
+insert into Etablissement values (2, 'Collège Lamartine', '3, avenue des corsaires', '35404', 'Paramé', '0299561459', null, 1,'Mme','Lefort','Anne',58);  
+insert into Etablissement values (3, 'Collège Léonard de Vinci', '2 rue Rabelais', '35418', 'Saint-Malo', '0299117474', null, 1,'M.','Durand','Pierre',60);   
+insert into Etablissement values (4, 'Centre de rencontres internationales', '37 avenue du R.P. Umbricht BP 108', '35407', 'Saint-Malo', '0299000000', null, 0, 'M.','Guenroc','Guy',200);
 SELECT * from Etablissement;
 
 DELETE FROM Groupe;
@@ -43,7 +43,7 @@ insert into Groupe values ('g034','Bagad An Hanternoz','ligue Hanternoz','93400'
 insert into Groupe values ('g035','Cercle Ar Vro Melenig','ligue Melenig','93400',2,'France - Bretagne','N',1);
 insert into Groupe values ('g036','Cercle An Abadenn Nevez','ligue Abadenn','93400',11,'France - Bretagne','N',1);
 insert into Groupe values ('g037','Kerc''h Keltiek Roazhon','ligue Roazhon','93400',12,'France - Bretagne','N',0);
-insert into Groupe  values ('g038','Bagad Plougastel','ligue Plougastel','93400',13,'France - Bretagne','N',1);
+insert into Groupe values ('g038','Bagad Plougastel','ligue Plougastel','93400',13,'France - Bretagne','N',1);
 insert into Groupe values ('g039','Bagad Nozeganed Bro Porh-Loeiz','ligue Porh','93400',12,'France - Bretagne','N',0);
 insert into Groupe values ('g040','Bagad Nozeganed Bro Porh-Loeiz','ligue Loeiz','93400',11,'France - Bretagne','N',1);
 insert into Groupe values ('g041','Jackie Molard Quartet','ligue Quartet','93400',33,'France - Bretagne','N',1);
@@ -53,13 +53,13 @@ insert into Groupe values ('g044','Kan Tri','ligue Tri','93400',12,'France - Bre
 SELECT * from Groupe;
 
 DELETE FROM Attribution;
-insert into Attribution values ('0350785N', 'g001', 11);
-insert into Attribution values ('0350785N', 'g002', 9);
-insert into Attribution values ('0350123A', 'g004', 13);
-insert into Attribution values ('0350123A', 'g005', 8);
-insert into Attribution values ('0351234W', 'g001', 3);
-insert into Attribution values ('0351234W', 'g006', 10);
-insert into Attribution values ('0351234W', 'g007', 7);
+insert into Attribution values (1, 'g001', 11);
+insert into Attribution values (1, 'g002', 9);
+insert into Attribution values (2, 'g004', 13);
+insert into Attribution values (2, 'g005', 8);
+insert into Attribution values (3, 'g001', 3);
+insert into Attribution values (3, 'g006', 10);
+insert into Attribution values (3, 'g007', 7);
 SELECT * from Attribution;
 
  

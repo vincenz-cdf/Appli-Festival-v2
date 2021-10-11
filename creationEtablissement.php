@@ -19,8 +19,13 @@ $action=$_REQUEST['action'];
 // les champs à vide sinon on affichera les valeurs précédemment saisies
 if ($action=='demanderCreEtab') 
 {  
-
-   $id='';
+   $sql="SELECT id FROM Etablissement ORDER by id Desc LIMIT 0,1";
+   $sth=$connexion->query($sql);
+   $resultat=$sth->fetchall(PDO::FETCH_ASSOC);
+   foreach ($resultat as $row) {
+       $id= $row['id'];
+   }
+   $id+=1;
    $nom='';
    $adresseRue='';
    $ville='';
@@ -35,7 +40,13 @@ if ($action=='demanderCreEtab')
 }
 else
 {
-   $id=$_REQUEST['id']; 
+   $sql="SELECT id FROM Etablissement ORDER by id Desc LIMIT 0,1";
+   $sth=$connexion->query($sql);
+   $resultat=$sth->fetchall(PDO::FETCH_ASSOC);
+   foreach ($resultat as $row) {
+       $id= $row['id'];
+   }
+   $id+=1;
    $nom=$_REQUEST['nom']; 
    $adresseRue=$_REQUEST['adresseRue'];
    $codePostal=$_REQUEST['codePostal'];
@@ -70,8 +81,7 @@ echo "
       </thead>
       <tr>
          <td> Id*: </td>
-         <td><input type='text' value='$id' name='id' size ='10' 
-         maxlength='8'></td>
+         <td><p>$id<p></td>
       </tr>";
      
       echo '
