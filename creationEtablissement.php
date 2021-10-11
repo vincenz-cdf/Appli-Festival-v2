@@ -97,8 +97,8 @@ echo "
       </tr>
       <tr>
          <td> Code postal*: </td>
-         <td><input type="text" value="'.$codePostal.'" name="codePostal" 
-         size="4" maxlength="5"></td>
+         <td><input type="number" value="'.$codePostal.'" name="codePostal" 
+         min="0" onKeyDown="if(this.value.length==5) return false;"></td>
       </tr>
       <tr >
          <td> Ville*: </td>
@@ -161,8 +161,8 @@ echo "
          </tr>
           <tr >
             <td> Nombre chambres offertes*: </td>
-            <td><input type="text" value="'.$nombreChambresOffertes.'" name=
-            "nombreChambresOffertes" size ="3" maxlength="3"></td>
+            <td><input type="number" value="'.$nombreChambresOffertes.'" name=
+            "nombreChambresOffertes" size ="4" onKeyDown="if(this.value.length==5) return false;"></td>
          </tr>
             <tr>
          <td align="right">

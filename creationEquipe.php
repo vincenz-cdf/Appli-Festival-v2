@@ -9,7 +9,15 @@ echo "<br><p align='center' class='textArianne'><a  href = 'index.php'> Accueil 
 Gestion d'équipes  </a> -> Création d'équipes</p><br>";
 
 $action=$_REQUEST['action'];
-
+$sql="SELECT id FROM Groupe ORDER by id Desc LIMIT 0,1";
+$sth=$connexion->query($sql);
+$resultat=$sth->fetchall(PDO::FETCH_ASSOC);
+foreach ($resultat as $row) {
+    $code= $row['id'];
+}
+$codeCh = substr($code, 1,4);
+$codeCh =$codeCh +1;
+$code = "g" . str_pad($codeCh, 3, "0", STR_PAD_LEFT);
 if ($action=='demanderCreEqu') 
 {
    $id='';
@@ -44,7 +52,7 @@ echo "
    class='content-table'>
       <thead>
          <tr>
-         <th colspan='3'>Nouvelle Equipe</th>
+         <th colspan='3'>Nouvelle Equipe(id :$code)</th>
          </tr>
       </thead>";
       echo '
@@ -60,13 +68,13 @@ echo "
       </tr>
       <tr class="ligneTabNonQuad">
          <td> Code postal: </td>
-         <td><input type="text" value="'.$adressePostale.'" name="adressePostale" size="50" 
-         maxlength="45" required></td>
+         <td><input type="number" value="'.$adressePostale.'" name="adressePostale" min="0" 
+         onKeyDown="if(this.value.length==5) return false;" required></td>
       </tr>
       <tr class="ligneTabNonQuad">
          <td> Nombres Personnes: </td>
          <td><input type="number" value="'.$nombrePersonnes.'" name="nombrePersonnes" 
-         size="3" maxlength="3" required></td>
+         min="0" onKeyDown="if(this.value.length==5) return false;"  required></td>
       </tr>
       <tr class="ligneTabNonQuad">
          <td> Nom pays: </td>
@@ -121,10 +129,9 @@ if ($action=='validerCreEqu')
             foreach ($resultat as $row) {
                 $code= $row['id'];
             }
-            $codeC = substr($code, 0,1);
             $codeCh = substr($code, 1,4);
             $codeCh =$codeCh +1;
-            $id = $codeC.$codeCh;
+            $id = "g" . str_pad($codeCh, 3, "0", STR_PAD_LEFT);
             $sql="SELECT nom FROM Groupe where nom='$nom'";
             $sth=$connexion->query($sql);
             $resultat=$sth->fetchall(PDO::FETCH_ASSOC);
@@ -133,7 +140,7 @@ if ($action=='validerCreEqu')
               $cpt=$cpt+1;
             }
             if($cpt>0){
-                echo '<script language="Javascript"> alert ("Les données entrées sont similaires à une autre équipe déjà existante" )</script>';  
+                echo '<script language="Javascript"> alert ("les donnée entrer son similaire as une autre équipe existante" )</script>';  
             }else{
               $nom=$_REQUEST['nom'];
               $identiteResponsable=$_REQUEST['identiteResponsable'];
