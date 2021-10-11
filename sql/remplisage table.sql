@@ -53,13 +53,13 @@ insert into Groupe values ('g044','Kan Tri','ligue Tri','93400',12,'France - Bre
 SELECT * from Groupe;
 
 DELETE FROM Attribution;
-insert into Attribution values (1, 'g001', 11);
-insert into Attribution values (1, 'g002', 9);
-insert into Attribution values (2, 'g004', 13);
-insert into Attribution values (2, 'g005', 8);
-insert into Attribution values (3, 'g001', 3);
-insert into Attribution values (3, 'g006', 10);
-insert into Attribution values (3, 'g007', 7);
+insert into Attribution values (1, 'g001', 1);
+insert into Attribution values (1, 'g002', 1);
+insert into Attribution values (2, 'g004', 1);
+insert into Attribution values (2, 'g005', 1);
+insert into Attribution values (3, 'g001', 1);
+insert into Attribution values (3, 'g006', 1);
+insert into Attribution values (3, 'g007', 1);
 SELECT * from Attribution;
 
  
