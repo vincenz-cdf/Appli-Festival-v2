@@ -20,7 +20,7 @@
 
 function obtenirReqEtablissements()
 {
-   $req="SELECT id, nom from Etablissement order by id";
+   $req="SELECT id, nom, nombreChambresOffertes from Etablissement order by id";
    return $req;
 }
 
@@ -288,6 +288,15 @@ function creerLigue($connexion,$compte,$intitule,$tresorier, $adresseboo, $adres
 function obtenirIDEquipe($connexion)
 {
     $req ='SELECT LAST_INSERT_ID(id) as "dernierID" from Groupe order by id desc limit 1';
+    $obtenirCompte=$connexion->query($req);
+    $sth = $connexion->query($req);
+    $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function obtenirIDEtab($connexion)
+{
+    $req ='SELECT LAST_INSERT_ID(id) as "dernierEID" from Etablissement order by id desc limit 1';
     $obtenirCompte=$connexion->query($req);
     $sth = $connexion->query($req);
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);

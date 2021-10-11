@@ -162,7 +162,7 @@ echo "
           <tr >
             <td> Nombre chambres offertes*: </td>
             <td><input type="text" value="'.$nombreChambresOffertes.'" name=
-            "nombreChambresOffertes" size ="2" maxlength="3"></td>
+            "nombreChambresOffertes" size ="3" maxlength="3"></td>
          </tr>
             <tr>
          <td align="right">

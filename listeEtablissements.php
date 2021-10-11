@@ -37,6 +37,7 @@ class='content-table'>
       foreach ($lgEtab as $row){
       $id=$row['id'];
       $nom=$row['nom'];
+      $total=$row['nombreChambresOffertes'];
       echo "
 		<tr class='content-table'>
          <td width='52%'>$nom</td>
@@ -62,7 +63,7 @@ class='content-table'>
          {
               $résulte=obtenirNbOccup($connexion,$row['id']);
             echo "
-            <td width='16%'>($résulte attributions) </td>";          
+            <td width='16%'>&nbsp&nbsp&nbsp&nbsp$résulte/$total Attributions&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </td>";          
 			}
 			echo "
       </tr>";

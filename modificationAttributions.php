@@ -17,6 +17,7 @@ Attribution chambres </a> -> Effectuer ou modifier les attributions</p><br>
       <td width='30%' align='left'><font size='4' class='textArianne'> Chambres réservées</td>
    </tr>
 </table>
+<br>
  ";
 // EFFECTUER OU MODIFIER LES ATTRIBUTIONS POUR L'ENSEMBLE DES ÉTABLISSEMENTS
 
@@ -108,13 +109,13 @@ class='content-attri'>";
       $chambretotal=nbchlouer($connexion,$idGroupe);
       echo "
       <tr class='content-attri'>
-         <td width='15%' > <font size='2'> $nom <p><Strong>(Ch à louer : $chambre)<p></strong></td>\n";
+         <td width='15%' > <font size='3px'> $nom <p><Strong>(Ch à louer : $chambre)<p></strong></td>\n";
          if($chambretotal[0]>0){
             echo" 
-            <td width=’10%’><font size='2'> $chambretotal[0]</td>";            
+            <td width=’10%’><font size='3px'> $chambretotal[0]</td>";            
          }else{
             echo" 
-            <td width=’10%’><font size='2'> 0</td>";
+            <td width=’10%’><font size='3px'> 0</td>";
          }
          echo"
          <td width=’10%’><font size='2'> $paysGroupe</td>";

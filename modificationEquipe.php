@@ -133,8 +133,8 @@ if ($action=='validerModifEqu')
       <h5><center><strong>La modification a été effectuée</strong></center></h5>";
    }else{
       echo "
-      <h5><center><strong>modifications imposible !!!</strong></center></h5>
-      <h5><center><strong> Si vous souétez enlever des personnes, il faut que vous déprogramier des chambre </strong></center></h5>";
+      <h5><center><strong>Modifications impossible !!!</strong></center></h5>
+      <h5><center><strong> Si vous souhaitez enlever des personnes, il faut que vous déprogrammiez des chambres ! </strong></center></h5>";
  
    }
 }

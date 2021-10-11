@@ -66,7 +66,7 @@ echo "
       <tr class="ligneTabNonQuad">
          <td> Nombres Personnes: </td>
          <td><input type="number" value="'.$nombrePersonnes.'" name="nombrePersonnes" 
-         size="1" maxlength="1" required></td>
+         size="3" maxlength="3" required></td>
       </tr>
       <tr class="ligneTabNonQuad">
          <td> Nom pays: </td>
@@ -133,7 +133,7 @@ if ($action=='validerCreEqu')
               $cpt=$cpt+1;
             }
             if($cpt>0){
-                echo '<script language="Javascript"> alert ("les donnée entrer son similaire as une autre équipe existante" )</script>';  
+                echo '<script language="Javascript"> alert ("Les données entrées sont similaires à une autre équipe déjà existante" )</script>';  
             }else{
               $nom=$_REQUEST['nom'];
               $identiteResponsable=$_REQUEST['identiteResponsable'];

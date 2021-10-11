@@ -25,7 +25,7 @@ if ($nbEtab!=0)
    $lgEtab=$rsEtab->fetch();
    // BOUCLE SUR LES ÉTABLISSEMENTS AYANT DÉJÀ DES CHAMBRES ATTRIBUÉES
    if($lgEtab==FALSE){
-      echo "<h1 align='center'>il n'y as aucune réservations <h1>" ;
+      echo "<h1 class='textAttri' align='center'>Il n'y a aucune réservation !<h1>" ;
    }
    while($lgEtab!=FALSE)
    {

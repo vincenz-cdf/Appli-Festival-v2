@@ -32,21 +32,21 @@ function verifierDonneesEtabM($connexion, $id, $nom, $adresseRue, $codePostal,
    if ($nom=="" || $adresseRue=="" || $codePostal=="" || $ville=="" || 
        $tel=="" || $nomResponsable=="" || $nombreChambresOffertes=="")
    {
-      ajouterErreur("Chaque champ suivi du caractère * est obligatoire");
+      ajouterErreur("<h5><center><strong>Chaque champ suivi du caractère * est obligatoire</strong></center></h5>");
    }
    if ($nom!="" && estUnNomEtablissement($connexion, 'M', $id, $nom))
    {
-      ajouterErreur("L'établissement $nom existe déjà");
+      ajouterErreur("<h5><center><strong>L'établissement $nom existe déjà</strong></center></h5>");
    }
    if ($codePostal!="" && !estUnCp($codePostal))
    {
-      ajouterErreur("Le code postal doit comporter 5 chiffres");   
+      ajouterErreur("<h5><center><strong>Le code postal doit comporter 5 chiffres</strong></center></h5>");   
    }
    if ($nombreChambresOffertes!="" && (!estEntier($nombreChambresOffertes) ||
        !estModifOffreCorrecte($connexion, $id, $nombreChambresOffertes)))
    {
       ajouterErreur
-      ("La valeur de l'offre est non entière ou inférieure aux attributions effectuées");
+      ("<h5><center><strong>La valeur de l'offre est non entière ou inférieure aux attributions effectuées</strong></center></h5>");
    }
 }
 

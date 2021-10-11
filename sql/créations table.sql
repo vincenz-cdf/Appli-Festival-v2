@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS Etablissement;
 
 create table Etablissement 
 (
-	id char(8) not null, 
+	id varchar(3) not null, 
 	nom varchar(45) not null,
 	adresseRue varchar(45) not null, 
 	codePostal char(5) not null, 
