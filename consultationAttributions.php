@@ -53,7 +53,7 @@ if ($nbEtab!=0)
          }else{
          echo"
          <th colspan='3' align='left'><strong>$nomEtab</strong>&nbsp;
-         (Offre : $nbOffre&nbsp;&nbsp;Disponibilités : $nbChLib) (Complet)
+         (Offre : $nbOffre&nbsp;&nbsp;Disponibilités : Complet) 
          </th>" ;           
          }
 
