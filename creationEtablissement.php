@@ -107,8 +107,8 @@ echo "
       </tr>
       <tr >
          <td> Téléphone*: </td>
-         <td><input type="text" value="'.$tel.'" name="tel" size ="20" 
-         maxlength="10"></td>
+         <td><input type="number" value="'.$tel.'" name="tel" size ="11" 
+         onKeyDown="if(this.value.length==10)return false;"></td>
       </tr>
       <tr >
          <td> E-mail: </td>
