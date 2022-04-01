@@ -118,12 +118,22 @@ function creerEtablissement($connexion, $id, $nom, $adresseRue, $codePostal,
    $nomResponsable=str_replace("'","''", $nomResponsable);
    $prenomResponsable=str_replace("'","''", $prenomResponsable);
    
-   $req="INSERT into Etablissement values ('$id', '$nom', '$adresseRue', 
-         '$codePostal', '$ville', '$tel', '$adresseElectronique', '$type', 
-         '$civiliteResponsable', '$nomResponsable', '$prenomResponsable',
-         '$nombreChambresOffertes')";
+   $statement = $connexion->prepare("INSERT into Etablissement(id, nom, adresseRue, codePostal, ville, tel, adresseElectronique, type, civiliteResponsable, nomResponsable, prenomResponsable,
+   nombreChambresOffertes) values (?,?,?,?,?,?,?,?,?,?,?,?)");
    
-   $connexion->query($req);
+   $statement->bindParam(1, $id);
+   $statement->bindParam(2, $nom);
+   $statement->bindParam(3 , $adresseRue); 
+   $statement->bindParam(4 , $codePostal);
+   $statement->bindParam(5 , $ville);
+   $statement->bindParam(6 , $tel);
+   $statement->bindParam(7 , $adresseElectronique);
+   $statement->bindParam(8 , $type);
+   $statement->bindParam(9 , $civiliteResponsable);
+   $statement->bindParam(10 , $nomResponsable);
+   $statement->bindParam(11 , $prenomResponsable);
+   $statement->bindParam(12 , $nombreChambresOffertes);
+   $statement->execute();
 }
 
 
@@ -280,7 +290,7 @@ function creerLigue($connexion,$compte,$intitule,$tresorier, $adresseboo, $adres
    $tresorier=str_replace("'","''", $tresorier);
    $adresseboo=str_replace("'","''", $adresseboo); 
    $adresseecr=str_replace("'","''", $adresseecr);       
-   $req="INSERT into Ligue values ('$compte','$intitule','$tresorier','$adresseboo','$dresseecr')";
+   $req="INSERT into Ligue values ('$compte','$intitule','$tresorier','$adresseboo','$adresseecr')";
    
    $connexion->query($req);
 }
@@ -288,7 +298,6 @@ function creerLigue($connexion,$compte,$intitule,$tresorier, $adresseboo, $adres
 function obtenirIDEquipe($connexion)
 {
     $req ='SELECT LAST_INSERT_ID(id) as "dernierID" from Groupe order by id desc limit 1';
-    $obtenirCompte=$connexion->query($req);
     $sth = $connexion->query($req);
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     return $result;
@@ -297,7 +306,6 @@ function obtenirIDEquipe($connexion)
 function obtenirIDEtab($connexion)
 {
     $req ='SELECT LAST_INSERT_ID(id) as "dernierEID" from Etablissement order by id desc limit 1';
-    $obtenirCompte=$connexion->query($req);
     $sth = $connexion->query($req);
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     return $result;
